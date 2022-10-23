@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../adventurers_camp_fairy_lantern"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Diwali-main"
+	}
+}

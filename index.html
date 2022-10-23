@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  
+  <script src="Log.js"></script>
+  <script src="Box.js"></script>
+  <script src="https://unpkg.com/aframe-spe-particles-component@^1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+
+</head>
+
+<body>
+
+  <a-scene id="stars"background="color:#000000">
+
+    <a-camera position="0 0 5">
+
+    </a-camera>
+
+    <a-assets>      
+
+      <a-asset-item id="table-obj" src="./models/tinker.obj"></a-asset-item>
+      <a-asset-item id="table-mtl" src="./models/obj.mtl"></a-asset-item>
+
+      <a-asset-item id="text-obj" src="./text/tinker.obj"></a-asset-item>
+      <a-asset-item id="text-mtl" src="./text/obj.mtl"></a-asset-item>
+
+      <a-asset-item id="star-obj" src="./stars/tinker.obj"></a-asset-item>
+      <a-asset-item id="star-mtl" src="./stars/obj.mtl"></a-asset-item>
+
+      <a-asset-item id="star2-obj" src="./star2/tinker.obj"></a-asset-item>
+      <a-asset-item id="star2-mtl" src="./star2/obj.mtl"></a-asset-item>
+
+      <a-asset-item id="oil_lamp" src="./oil_lamp/scene.gltf"></a-asset-item>
+
+      
+
+     <!--<a-asset-item id="table-gltf" src="./models/gltf/CoffeeTableModel.glb"></a-asset-item>--> 
+      
+    </a-assets>
+    
+    <a-entity log="message: Hi, it's me!"></a-entity>
+
+    <a-entity
+    position="-28.5 21.5 0"
+    text="font: exo2bold; align: center; width: 40; color: black; value: VIRTUAL FLIGHT"
+  ></a-entity>
+
+    <a-entity obj-model="obj: #table-obj; mtl: #table-mtl"  position="-2 -3 0" rotation="-90 -40 0" scale="0.03 0.02 0.03 "
+    move-box-on-click></a-entity>
+
+    <a-entity obj-model="obj: #text-obj; mtl: #text-mtl"  position="-2 2 0" rotation="-90 -2 0" scale="0.03 0.02 0.03 "
+    ></a-entity>
+
+    <a-entity obj-model="obj: #star2-obj; mtl: #star2-mtl"  position="-5 0 0" rotation="-90 -45 0" scale="0.02 0.01 0.01 "></a-entity>
+
+    <a-entity obj-model="obj: #star2-obj; mtl: #star2-mtl"  position="-5 3 0" rotation="-50 -40 " scale="0.01 0.01 0.01 "></a-entity>
+   
+    <a-entity obj-model="obj: #star2-obj; mtl: #star2-mtl"  position="-1 1 2" rotation="-20 -80  0" scale="0.01 0.01 0.01 "></a-entity>
+
+    <a-entity obj-model="obj: #star2-obj; mtl: #star2-mtl"  position="-3 1 2" rotation="-20 -80  0" scale="0.01 0.01 0.01 " stars-twinkle></a-entity>
+
+    <a-entity position="0 1 0 " spe-particles="        
+    color: yellow, red, cyan, green; 
+    distribution: sphere; 
+    randomize-velocity: true;
+    radius: 1; 
+    particle-count: 1000; 
+    velocity: 1; 
+    velocity-spread: 15; 
+    drag: 1; 
+    max-age: 2;
+    duration: -1,
+    blending: additive;
+    active-multiplier: 1000; 
+    size: 1, 1, 2, 1">
+    </a-entity>
+
+    <a-sky color="#000000"></a-sky>
+    <a-camera position="0 0 30"></a-camera>
+<a-entity id="oil" gltf-model="#oil_lamp" position="1 1 0" scale="0.2 0.2 0.2">
+</a-entity>
+
+</a-scene>
+</body>
+
+</html>
+
